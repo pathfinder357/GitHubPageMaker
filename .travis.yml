@@ -21,10 +21,11 @@ script: bundle exec rake site:deploy --quiet #--trace
 # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
 env:
   global:
-    secure: "AcZHBCnvzgwdk/53hQDHBXoKlrLibzEId92SOPlSCK9y3NJkGLjJyubv5wAJjPT3lYSSeUDPzkWbjnSlqR9dSJVW0G3SsdhqraOi1T3gcmpHYSekaR2PwnEKKNQ8nX80vXgHXK0wbW+sstEVrdKt1uj8yiNMgunpo3l7UVvDu2lI6WpiVWuSAfyD1Z
-             fEngsSeemmfVBFd9GQCtGQGnWL0mpOKwm5d8UyJQwVXRx/1jbNHfNuquRE5QxJb3c4ZxQ27jKhqwMl7sPVEINej4vwZkvBfncxnIHGwfcBZXAk2SIAp0ckTFpOYaxDsRWwxPX9+SPjNu0vK79T+ViXRTnbHD0uNdS8cFIeCasNjB5s4O+Va/MaaMKvFc9EMmS3eg7
-             j9dlgg80AdoyR6LuiD06TK2ir/yWJeJmA4ixKc6xSSb/9MtpXc3KKZwxXIAhq/e7FqVcpt/rerABmWbK87LRhf7d/JSu9euO+P49kUu0w4QE597Osspeql63SG1YQ0ca69dYemg8CMjr2oYLIyPyy1uH4qwD77TmT9Naxwf0S7Yx9YhD9SEerQk3Z88kO7YSEzSJr
-             x2bMMGLsqhiufSLi3rPlFkHsygNPzz6JFgWPSYoDUl+5e7oFIiDosUDbcjNBtLFsSOQU89m14jwbeLvJcfuqjXLOABjv31kIlWGWSPI="
+    secure: "ZVy8XWk11Qik9pHlw59Hvp1L+wM5rmX75tu640ZGnop4zyfDzIPCH8pg6Q54umiXE+mqw25aP+zectFZHAqJdCSSp1TO0jgzJoo/0ZYhsH+KdQAE5SaF8+VglJdOQ2FWKEHXaxRz6KNw2w5tX/pJ+g0odVyMPQKZ6JOczukrv3Tl6kcL99ROgVwg24
+  Oo7qIDk1kyCNBbC54daoy43Y+S1delSZr4mNlEO5G1/PkRk5GQd43f1i45qHUrV317hqnTGjNqMKqDfZbEt6AzIcI5vXJ0BoVdcA1lEE2LSoiAnpfP0ul4SA0apRDOoFAZ8zkrhWeA/UoYdSFGiJa/JS/+OUa03rlkb9UJ7pzyuYiseRypS1OHLpxN8cu4cWkG3Qi
+  Q7FXx+wmqYNTTZidpKG5rtkd7BJr4GxkxhXmk+GdjcLbtg5vHWsdjjOBaHUxPSTPVWMu9yNZFUBwnO2iqtxNfTaZnKEGzdLEaoq9IE0oVKRnCgCMQW3MWwiz7tuRv3E1wJVdpU3X+lbbRxEAA9A37H/0/DNl+VDP5WtibOBFTNrJ9d9CwbiOViHfYECwG29gm4glS
+  0OS7/dRara/8o4y3hQIX/yML2/ppsr00cgiF8sE18DAyRbeN7gu7Hlh8/0qCJVcBhXdfLp/uC+Rgr2y4Y5myBkSlY7OR71Ys8RDIi8g="
+
 branches:
   only:
     - master
