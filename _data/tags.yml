@@ -1,0 +1,12 @@
+algorithm :
+  name: algorithm
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+data-structure :
+  name: data-structure
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+ai :
+  name: ai
+  description: False
+  cover: assets/built/images/background-frontend.jpg
