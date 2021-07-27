@@ -1,0 +1,3 @@
+[submodule "output"]
+	path = output
+	url = https://github.com/pathfinder357/pathfinder357.github.io.git
