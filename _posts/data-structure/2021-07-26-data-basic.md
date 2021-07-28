@@ -10,7 +10,6 @@ class: post-template
 subclass: 'post tag-data-structure'
 author: pathfinder357
 ---
+노드 -> 트리 -> 정렬 -> 탐색 -> 큐 -> 해쉬 -> 그래프 ->문자열 검색->알고리즘 성능분석 -> 분할정복 ->동적 계획법 ->탐욕알고리즘 -> 백트래킹
 
-초기
-자료구조란?
 
