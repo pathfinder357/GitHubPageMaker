@@ -45,7 +45,7 @@ url: https://pathfinder357.github.io
 baseurl: /
 
 # Website info
-title: CYJ practice blog
+title: Pathfinder practice blog
 # 자신의 blog title.
 
 description: 공부내용 정리 블로그
@@ -111,7 +111,7 @@ safe: False
 lsi: False
 
 username: pathfinder357
-repo: GitHubPageMaker
+repo: https://github.com/pathfinder357/GitHubPageMaker
 # username : travis-ci와 연동하는 github의 username
 # repo: travis-ci와 연동하는 github의 repository이름
 # https://github.com/<username>/<repository>
