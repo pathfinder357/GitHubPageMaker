@@ -12,5 +12,5 @@ author: pathfinder357
 ---
 
 초기
-
+자료구조란?
 
