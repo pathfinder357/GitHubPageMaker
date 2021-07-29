@@ -3,13 +3,19 @@ layout: post
 current: post
 cover:  assets/built/images/default.png
 navigation: True
-title: 
+title: 자료구조 시작
 date: 2021-07-26 16:40:00
 tags: [data-structure]
 class: post-template
 subclass: 'post tag-data-structure'
 author: pathfinder357
 ---
-노드 -> 트리 -> 정렬 -> 탐색 -> 큐 -> 해쉬 -> 그래프 ->문자열 검색->알고리즘 성능분석 -> 분할정복 ->동적 계획법 ->탐욕알고리즘 -> 백트래킹
+
+자료구조는 알고리즘을 익히는데 필요한 기초지식이면서 그자체로도 매우 중요한 내용이다.
+
+자료구조에서 4가지 자료구조(리스트, 스택, 큐 ,트리)를 차례대로 살펴보면서 데이터를 효율적으로 관리하는 기법을 익힐 예정입니다.
+
+
+
 
 
