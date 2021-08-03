@@ -77,13 +77,18 @@ ex3)
 
 알고리즘
 
-~~~
+~~~python
 for p in parseq:
-if p =='(' : S.push(p)
-elif p == ')' : S.pop()  <- error 오른쪽이 더 많음
-else: print('Not allowed Symbol)
-if len(S) > 0: return False <- error 왼쪽이 더많음
-else: retun True
+    if p =='(' : 
+        S.push(p)
+    elif p == ')' : 
+        S.pop()  # error 오른쪽이 더 많음
+    else: 
+        print('Not allowed Symbol)
+    if len(S) > 0: 
+        return False  # error 왼쪽이 더많음
+    else: 
+        retun True
 ~~~
 
 전체 소스 코드
@@ -112,21 +117,27 @@ class Stack:
     #len()호출하면 stack의 item수 반환
     def __len__(self):
         return len(self.items)
-
-    def parseq(self):
-        n_stack=[]
+    
+    def paresq(self, p):
         for p in self.items:
             if p == '(':
-                n_stack.push(p)
+                self.push(p)
             elif p == ')':
-                n_stack.pop()
+                print('doing pop')
+                self.pop(p)
             else:
                 print('not allowed Symbol')
-        if n_stack.__len__() > 0:
+        if self.__len__() > 0:
             return False
         else:
-            print('no error')
             return True
+
+S= Stack()
+S.paresq("(")
+S.paresq("(")
+S.paresq(")")
+S.paresq(")")
+print(len(S))
     
 ~~~
 
