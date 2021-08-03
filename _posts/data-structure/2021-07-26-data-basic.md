@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/built/images/default.png
+cover:  assets/built/images/author-logo.png
 navigation: True
 title: 자료구조 시작
 date: 2021-07-26 16:40:00
