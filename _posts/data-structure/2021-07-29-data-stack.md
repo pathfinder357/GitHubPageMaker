@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  assets/built/images/author-logo.png
 navigation: True
-title: 자료구조 stack(2)
+title: 자료구조 (2) stack
 date: 2021-07-29 16:40:00
 tags: [data-structure]
 class: post-template
@@ -12,35 +12,122 @@ author: pathfinder357
 ---
 
 ### stack 
+__init(self) : 생성함수
+~~~python
+def __init__(self):
+        self.items = []
+~~~
+
+ex)
+~~~python
+S= Stack()
+~~~
+init 생성함수안 에있는 객체인 self.itmes = []가 자동으로 생성
+
+try & except : try 블록에 있는것을 수행하다가 수행중 에러가 나오면 except에 있는 statment를 수행
+~~~python
+def pop(self):
+        try:
+            return self.items.pop()
+        except IndexError:
+            print('stack is empty')
+~~~
+
+print(len(S)) len 을 수행하면 class Stack 안에 있는 __len__ 안에 있는 statement를 수행
+~~~python
+def __len__(self):
+        return len(self.items)
+~~~
+
+stack 안에 수행되는 함수들은 전부 O(1) 상수시간안에 돌아가는 자료구조이다.
+
+prac) 괄호 맞추기
+
+- (2 + 5) * 7 -((3-1)/2+7)
+- ( ( ) ( ) )
+- ( ( ) ) ) (    <- 적당한 쌍이 아님
+
+-문제:
+
+입력: 왼쪽 오른쪽 괄호의 문자열
+
+출력: 괄호쌍이 맞춰져있으면 True or False
+
+관찰:
+
+......(.......)......
+
+ex1)
+
+( ( ) ( ) )
+
+1 2 2 3 3 1
+
+왼쪽부터 차례로 읽으면
+
+(1) 왼쪽 괄호 ( 왼쪽 괄호가 들어가면 기다려야 하므로 push
+
+ex2)
+
+( ) )
+
+ex3)
+
+( ) (
+
+알고리즘
+
+~~~
+for p in parseq:
+if p =='(' : S.push(p)
+elif p == ')' : S.pop()  <- error 오른쪽이 더 많음
+else: print('Not allowed Symbol)
+if len(S) > 0: return False <- error 왼쪽이 더많음
+else: retun True
+~~~
+
+전체 소스 코드
 
 ~~~python
 class Stack:
     def __init__(self):
-        self.top=[]
-
-    def __len__(self):
-        return len(self.top)
+        self.items = []
     
-    def __str__(self):
-        return str(self.top[::1])
-
-    def push(self, item):
-        self.top.append(item)
-
-    def is_empty(self):
-        if self.top==0:
-            return True
-        else:
-            return False
-
+    def push(self, val):
+        self.items.append(val)
+    
     def pop(self):
-        if not self.is_empty():
-            return self.top.pop(-1):
+        try:
+            return self.items.pop()
+        except IndexError:
+            print('stack is empty')
+    
+    #가장 맨위에 있는 값을 리턴    
+    def top(self):
+        try:
+            return self.items[-1]
+        except IndexError:
+            print('stack is empty')
+    
+    #len()호출하면 stack의 item수 반환
+    def __len__(self):
+        return len(self.items)
+
+    def parseq(self):
+        n_stack=[]
+        for p in self.items:
+            if p == '(':
+                n_stack.push(p)
+            elif p == ')':
+                n_stack.pop()
+            else:
+                print('not allowed Symbol')
+        if n_stack.__len__() > 0:
+            return False
         else:
-            print("stack underflow")
-            exit()
-    def clear(self):
-        self.top[]
+            print('no error')
+            return True
+    
 ~~~
 
 
