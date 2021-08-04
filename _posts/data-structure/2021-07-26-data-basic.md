@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  assets/built/images/author-logo.png
 navigation: True
-title: 자료구조 (1) 시작
+title: 자료구조 (2) 순차적자료구조
 date: 2021-07-26 16:40:00
 tags: [data-structure]
 class: post-template
@@ -11,7 +11,8 @@ subclass: 'post tag-data-structure'
 author: pathfinder357
 ---
 
-순차적 자료구조
+
+### 순차적 자료구조
 
 (1) 배열, 리스트
 

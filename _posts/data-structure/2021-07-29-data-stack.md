@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  assets/built/images/author-logo.png
 navigation: True
-title: 자료구조 (2) stack
+title: 자료구조 (3) stack
 date: 2021-07-29 16:40:00
 tags: [data-structure]
 class: post-template
