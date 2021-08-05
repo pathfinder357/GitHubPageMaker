@@ -114,8 +114,8 @@ class Stack:
         except IndexError:
             print('stack is empty')
     
-    #len()호출하면 stack의 item수 반환
-    def __len__(self):
+    #stack의 item수 반환
+    def size(self):
         return len(self.items)
     
     def paresq(self, p):
@@ -131,15 +131,49 @@ class Stack:
             return False
         else:
             return True
-
-S= Stack()
-S.paresq("(")
-S.paresq("(")
-S.paresq(")")
-S.paresq(")")
-print(len(S))
-    
+  
 ~~~
+
+### postfix 변환기
+
+~~~python
+from stack_queue import Stack
+
+def postfix_op(x):
+    s = Stack()
+    outstack=[]
+    priority = {
+        '*':3,
+        '/':3,
+        '+':2,
+        '-':2,
+        ')':4,
+        '(':1
+    }
+    for token in x:
+        if token not in '+-*/()':
+            outstack.append(token)
+        elif token == '(':
+            s.push(token)
+        elif token == ')':
+            while s.top() != '(':
+                outstack.append(s.pop())
+            s.pop()
+        else:
+            if s.is_empty():
+                s.push(token)
+            else:
+                while s.size() > 0:
+                    if priority[s.top()] >= priority[token]:
+                        outstack.append(s.pop())
+                    else:
+                        break
+                s.push(token)
+    while not s.is_empty():
+        outstack.append(s.pop())
+    return outstack
+~~~
+
 
 
 
