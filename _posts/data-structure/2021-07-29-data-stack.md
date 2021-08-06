@@ -174,6 +174,32 @@ def postfix_op(x):
     return outstack
 ~~~
 
+###postfix 계산기(int일 경우에만)
+
+~~~python
+def calc(x):
+    s2= Stack()
+    for token in x:
+        if token not in '+-*/':
+            s2.push(token)
+        elif token =='+':
+            a=int(s2.pop())
+            b=int(s2.pop())
+            s2.push(b+a)
+        elif token =='-':
+            a=int(s2.pop())
+            b=int(s2.pop())
+            s2.push(b-a)
+        elif token =='*':
+            a=int(s2.pop())
+            b=int(s2.pop())
+            s2.push(b*a) 
+        elif token =='/':
+            a=int(s2.pop())
+            b=int(s2.pop())
+            s2.push(int(b/a))
+    return int(s2.pop())
+~~~
 
 
 
