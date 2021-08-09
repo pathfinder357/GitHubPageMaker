@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  assets/built/images/author-logo.png
 navigation: True
-title: 자료구조 (2) 순차적자료구조
+title: 자료구조 (4) 큐
 date: 2021-08-06 11:33:00
 tags: [data-structure]
 class: post-template
@@ -32,6 +32,35 @@ queue는 1.enqueue는 차곡차곡 쌓여서 어디까지 쌓여있는지
 여기서 주의할점은 dequeue를 한다고 해서 실제로 값이 삭제되는 것이 아니고
 
 index를 조절하는것일 뿐이다.
+
+
+## 큐 설계
+
+~~~python~~~
+class Queue:
+    def __init__(self):
+        self.items = []
+        self.front_index = 0
+        self.size =0
+
+    def enqueue(self, val):
+        self.items.append(val)
+        self.size += 1
+    
+    def dequeue(self):
+        if self.front_index == len(self.items):
+            print('Queue is empty')
+            return None
+        else:
+            x = self.items[self.front_index]
+            self.front_index += 1
+            self.size -= 1
+            self.items.pop(0)
+            return x
+
+    def size(self):
+        return len(self.size)
+~~~
 
 #### Josephus Problem
 
