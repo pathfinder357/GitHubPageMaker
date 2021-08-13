@@ -61,7 +61,7 @@ author: pathfinder357
    * Additive hash: key[i]의 단순 합
    * Rotating hash: <<, >>(비트 쉬프트)연산과 ^(exclusive or) 연산을 반복
    
-*좋은 해시 함수란?
+* 좋은 해시 함수란?
    * 되도록 빠르고, 충돌이 되도록 적어야 한다.
 
 ***
