@@ -36,7 +36,7 @@ author: pathfinder357
     
 * perpect 해시 함수: 충돌없이 1 - to - 1 매핑하는 해시 함수
 
-* <b> c- universal 해시 함수: 서로 임의의 두 key 값 x, y 에대해 prob(f(x) == f(y)= c/size(H))<br/>
+* c- universal 해시 함수: 서로 임의의 두 key 값 x, y 에대해 prob(f(x) == f(y)= c/size(H))
     이 성립하는 해시 함수
 
 * (key 값이 숫자일 경우)
