@@ -10,3 +10,7 @@ ai :
   name: ai
   description: False
   cover: assets/built/images/background-frontend.jpg
+blockchain :
+  name: blockchain
+  description: False
+  cover: assets/built/images/background-frontend.jpg
