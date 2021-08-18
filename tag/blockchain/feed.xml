@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://pathfinder357.github.io/tag/blockchain/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pathfinder357.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-08-18T06:10:30+00:00</updated>
+  <id>https://pathfinder357.github.io/tag/blockchain/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Pathfinder practice blog | </title>
+  
+
+  
+    <subtitle>공부내용 정리 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">블록체인 (1)</title>
+      <link href="https://pathfinder357.github.io/blockchain-1" rel="alternate" type="text/html" title="블록체인 (1)" />
+      <published>2021-08-17T15:20:00+00:00</published>
+      <updated>2021-08-17T15:20:00+00:00</updated>
+      <id>https://pathfinder357.github.io/blockchain-1</id>
+      <content type="html" xml:base="https://pathfinder357.github.io/blockchain-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-1&quot;&gt;first&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;비트코인-네트워크의-개요&quot;&gt;비트코인 네트워크의 개요&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;비트코인의-탄생&quot;&gt;&lt;em&gt;비트코인의 탄생&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;중앙집권적인 정부나 기업이 개인의 프라이버시를 보장해 주지 못하므로 암호 기술을 이용해 스스로 프라이버시를 보호하기 위해 탄생&lt;/p&gt;
+
+&lt;p&gt;사토시 나가모토라는 익명의 저자가 쓴 한편의 논문에서 시작 됫으며 이논문은 탈중앙화된 화폐시스템을 제안&lt;/p&gt;
+
+&lt;p&gt;이 논문의 주요 제안 내용은 이와 같다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;중앙통제시스템이 없는 탈중앙화된 p2p 네트워크다.&lt;/li&gt;
+  &lt;li&gt;이전에 해결하지 못한 &lt;em&gt;이중 지급 문제&lt;/em&gt;를 해결했다.&lt;/li&gt;
+  &lt;li&gt;거래원장은 모든 참여자에게 공개된다.&lt;/li&gt;
+  &lt;li&gt;참여자들은 거래 원장을 조회할수 있고, 규칙에 맞게 작성됐는지 검증할수 있다.&lt;/li&gt;
+  &lt;li&gt;블록체인 데이터를 신뢰할수있는 합의시스템(PoW: proof of work)이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이중지금문제란 어떤 계좌의 잔액이 100원만 남았을때 A에게 100원을 송금하고 B에게도 100원을 송금하는것&lt;/p&gt;
+
+&lt;p&gt;중앙통제시스템에서 관리한다면 A에게 100원을 송금하자마자 해당 계좌의 잔액은 비었으므로 B에게 송금이 불가하지만
+중앙통제시스템이 없는 p2p 분산 네트워크는 관리 주체가 없기 때문에 이 문제 해결이 어려움&lt;/p&gt;
+
+&lt;p&gt;하지만 이논문을 바탕으로 여러개발자들이 비트코인 논문 제안 내용을 연구하여 비트코인 네트워크를 구현&lt;/p&gt;
+
+&lt;h4 id=&quot;암호화폐의-주요-이슈&quot;&gt;&lt;em&gt;암호화폐의 주요 이슈&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;p2p 분산 시스템은 근본적으로 데이터의 일관성, 네트워크의 가용성, 분할내성을 동시에 만족할수 없다.&lt;/p&gt;
+
+&lt;p&gt;이러한 문제로 인해 기존에 제안된 암호화폐는 묵살 되었고 실생활에 통용될수 없었고 이를 해결하기 위해서는
+다음과 같은 문제점들이 해결되어야한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;내가 받은 암호화폐가 진본인지 위조인지 확인가능한가?&lt;/li&gt;
+  &lt;li&gt;내가 받은 암호화폐가 이중 지급 된것이 아닌지 확인가능한가?&lt;/li&gt;
+  &lt;li&gt;내가 보유한 암호화폐의 소유권을 다른 사용자가 인정가능한가?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위 문제에 대한 기본적 해결책은 중앙통제 시스템이 검증하고 보관하는것이지만, 중앙화폐시스템은 시스템에 대한 공격을 받으면 산하에 있는 정보가 누출된다는 취약점이 있다.&lt;/p&gt;
+
+&lt;p&gt;사토시 나카모토는 기존 암호화폐시스템들을 발전시켜 완전히 탈중앙화된 개념을 사용하면서도 위 문제를 해결했다.&lt;/p&gt;
+
+&lt;h4 id=&quot;비트코인은-기존-암호화페-아이디어-종합체&quot;&gt;&lt;em&gt;비트코인은 기존 암호화페 아이디어 종합체&lt;/em&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ecash schema: p2p 네트워크에서 자신이 암호화폐의 소유자임을 ‘증명’ 하고, 다른 사람들이 ‘검증’ 하기 위해 전자 서명을 사용&lt;/li&gt;
+  &lt;li&gt;State machine replication: 각 노드간 데이터 일관성을 보장하기 위한 시스템이다. State는 블록체인의 상태이며 시간에 따라 변한다 &lt;em&gt;1(S1 -&amp;gt; S2 -&amp;gt; S3 -&amp;gt;..)&lt;/em&gt;. 시간에 따른 상태 변화는 모든 노드가 동일하게 관리해야 한다.&lt;/li&gt;
+  &lt;li&gt;Consensus mechanics: 개별 거래 원장에서 부터 블록체인의 상태까지 모든 과정에 대해 각노드들이 동의할수있는 합의 규칙이다. 이규칙에 의해 전체 상태가 일관되게 유지된다.&lt;/li&gt;
+  &lt;li&gt;HashCash computational puzzle: 합의 규칙에 따라 수학적 퍼즐이 제시되고, 채굴자들은 경쟁적으로 이문제를 푼다. 경쟁에서 이긴 채굴자가 블록을 생성할 권한을 받는다. 이 과정을 통해 신규 암호화화폐가 발행되고, 상태 변화의 일관성이 유지된다.&lt;/li&gt;
+  &lt;li&gt;peer-to-peer: 서버- 클라이언트 구조가 아닌 p2p 구조로 탈중앙화를 이뤘다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;추가설명: A,B가 100원씩 잔액이 있는 상태를 S1이라 가정하면, A가 B에게 50원 송금하면 잔액이 변한다. 이상태를 S2라고 하면 송금행위로 인해 블록체인의 상태는 S1-&amp;gt;S2로 변함&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;블록체인-기술의-의의&quot;&gt;블록체인 기술의 의의&lt;/h4&gt;
+
+&lt;p&gt;블록체인의 의의는 안전하지 않은 인터넷망에서 어떠한 중재자 없이 가치 있는 대상을 안전하고 자유롭게 거래 가능하게 하는것&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;중재자 없는 자유로운 거래 실현
+    &lt;ul&gt;
+      &lt;li&gt;서로 신뢰할수 없는 네트워크 상 안전하게 가치있는 것들을 거래 하게하는 블록체인&lt;/li&gt;
+      &lt;li&gt;단순 화폐교환:비트코인, 화폐 뿐 아니라 계약서, 증명성 교환가능: 이더리움&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;화폐, 계약서, 증명서 등 디지털 대상의 다양화&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;사용자 증가에 따른 새로운 가치 창출
+    &lt;ul&gt;
+      &lt;li&gt;사용자들은 매우 편하게 서로의 가치를 교환할수 있게 됨&lt;/li&gt;
+      &lt;li&gt;이 편리함을 바탕으로 사용자들은 점점 많아지고 가치의 교환이 점점더 활발해 짐으로서 새로운 가치 출몰가능성↑&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;블록체인이-가지고-올-비즈니스-혁신&quot;&gt;블록체인이 가지고 올 비즈니스 혁신&lt;/h4&gt;
+
+&lt;p&gt;블록체인이 가진 4가지 특성:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Decentralization (탈중앙화)&lt;/li&gt;
+  &lt;li&gt;Transparency (투명성)&lt;/li&gt;
+  &lt;li&gt;Anonymous (익명성)&lt;/li&gt;
+  &lt;li&gt;Immutability (불변성)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 4가지의 특징은 점차 사회를 hyper-connect society로 이끌것이다. 거래에서 발생하는 비용절감과 간소화, 스마트컨트랙으로 계약 내용 이행이 자동화 됨으로써 현재 활발하게 개발되고있는 인공지능 기반 자율주행등 기술에도 블록체인의 기술적 가치가 높다.&lt;/p&gt;
+
+&lt;h4 id=&quot;비트코인-p2p-network&quot;&gt;비트코인 p2p network&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;각 노드가 동등함&lt;/li&gt;
+  &lt;li&gt;거래 원장관리, 거래승인, 거래내역 검증
+    &lt;ul&gt;
+      &lt;li&gt;거래승인(mining), 거래원장관리(blockchain)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;합의 규칙에 따라 각자 업무 수행&lt;/li&gt;
+  &lt;li&gt;전체 노드 50%이상이 정상 데이터가지면 일관성 유지가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;비트코인-네트워크-구성원&quot;&gt;비트코인 네트워크 구성원&lt;/h4&gt;
+
+&lt;p&gt;기본적으로 송금(거래내역생성, 트랜잭션 생성), 송금내용확인(검증) 은 모든 노드가 수행&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Full blockchain node
+    &lt;ul&gt;
+      &lt;li&gt;채굴자 노드가 &lt;em&gt;블록&lt;/em&gt;을 생성한것을 기존 블록체인으로 연결해서 블록체인을 관리&lt;/li&gt;
+      &lt;li&gt;풀 노드가 관리하는 블록체인에는 모든 거래내역(Transaction,TX)애 저장됨&lt;/li&gt;
+      &lt;li&gt;블록체인은 거래 내여들의 집합체이므로 공공거래원장이라고 불림&lt;/li&gt;
+      &lt;li&gt;이 공공 거래장부(블록체인)은 풀노드가 가지고 있고 분산저장&lt;/li&gt;
+      &lt;li&gt;따라서 일부가 잘못되더라도 자체 복원 능력을 가짐&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lightweight node
+    &lt;ul&gt;
+      &lt;li&gt;스마트기기 후에 설명&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Miner node
+    &lt;ul&gt;
+      &lt;li&gt;송금내역을 모아서 승인하는 절차 수행&lt;/li&gt;
+      &lt;li&gt;승인이 완료된 트랜잭션들을 모아서 &lt;em&gt;블록&lt;/em&gt;을 생성하고 네트워크 전파&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;3rd party API client
+    &lt;ul&gt;
+      &lt;li&gt;안전성 문제때문에 비트코인 네트워크의 기본 구성원이라 할수없지만 후에 할 실습으로 왜 할수없다 하는지 알아볼 예정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>yujunchoi</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blockchain" />
+      
+
+      
+        <summary type="html">목차. first</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>블록체인 (1)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- 웹폰트 추가 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="공부내용 정리 블로그" />
+    <link rel="shortcut icon" href="https://pathfinder357.github.io/assets/built/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://pathfinder357.github.io/blockchain-1" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Pathfinder practice blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="블록체인 (1)" />
+    <meta property="og:description" content="목차. first 비트코인 네트워크의 개요 비트코인의 탄생 중앙집권적인 정부나 기업이 개인의 프라이버시를 보장해 주지 못하므로 암호 기술을 이용해 스스로 프라이버시를 보호하기 위해 탄생 사토시 나가모토라는 익명의 저자가 쓴 한편의 논문에서 시작 됫으며 이논문은 탈중앙화된 화폐시스템을 제안 이 논문의 주요 제안 내용은 이와 같다 중앙통제시스템이 없는 탈중앙화된 p2p 네트워크다. 이전에 해결하지" />
+    <meta property="og:url" content="https://pathfinder357.github.io/blockchain-1" />
+    <meta property="og:image" content="https://pathfinder357.github.io/assets/built/images/author-logo.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-08-17T15:20:00+00:00" />
+    <meta property="article:modified_time" content="2021-08-17T15:20:00+00:00" />
+    <meta property="article:tag" content="Blockchain" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="블록체인 (1)" />
+    <meta name="twitter:description" content="목차. first 비트코인 네트워크의 개요 비트코인의 탄생 중앙집권적인 정부나 기업이 개인의 프라이버시를 보장해 주지 못하므로 암호 기술을 이용해 스스로 프라이버시를 보호하기 위해 탄생 사토시 나가모토라는 익명의 저자가 쓴 한편의 논문에서 시작 됫으며 이논문은 탈중앙화된 화폐시스템을 제안 이 논문의 주요 제안 내용은 이와 같다 중앙통제시스템이 없는 탈중앙화된 p2p 네트워크다. 이전에 해결하지" />
+    <meta name="twitter:url" content="https://pathfinder357.github.io/" />
+    <meta name="twitter:image" content="https://pathfinder357.github.io/assets/built/images/author-logo.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Pathfinder practice blog" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Blockchain" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pathfinder practice blog",
+        "logo": "https://pathfinder357.github.io/"
+    },
+    "url": "https://pathfinder357.github.io/blockchain-1",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://pathfinder357.github.io/assets/built/images/author-logo.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://pathfinder357.github.io/blockchain-1"
+    },
+    "description": "목차. first 비트코인 네트워크의 개요 비트코인의 탄생 중앙집권적인 정부나 기업이 개인의 프라이버시를 보장해 주지 못하므로 암호 기술을 이용해 스스로 프라이버시를 보호하기 위해 탄생 사토시 나가모토라는 익명의 저자가 쓴 한편의 논문에서 시작 됫으며 이논문은 탈중앙화된 화폐시스템을 제안 이 논문의 주요 제안 내용은 이와 같다 중앙통제시스템이 없는 탈중앙화된 p2p 네트워크다. 이전에 해결하지"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="블록체인 (1)" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://pathfinder357.github.io/">Pathfinder practice blog</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-data-structure" role="menuitem"><a href="/tag/data-structure/">data-structure</a></li>
+    <li class="nav-algorithm" role="menuitem"><a href="/tag/algorithm/">algorithm</a></li>
+    <li class="nav-blockchain" role="menuitem"><a href="/tag/blockchain/">blockchain</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">ai</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-blockchain post tag-blockchain ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="17 August 2021">17 August 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/blockchain/'>BLOCKCHAIN</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">블록체인 (1)</h1>
+            </header>
+
+            <!--
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/author-logo.png)">
+            </figure>
+            
+            -->
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p><span class="table-of-contents-list">목차. </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./blockchain-1">first</a></li>
+</ul>
+
+<h3 id="비트코인-네트워크의-개요">비트코인 네트워크의 개요</h3>
+<hr />
+
+<h4 id="비트코인의-탄생"><em>비트코인의 탄생</em></h4>
+
+<p>중앙집권적인 정부나 기업이 개인의 프라이버시를 보장해 주지 못하므로 암호 기술을 이용해 스스로 프라이버시를 보호하기 위해 탄생</p>
+
+<p>사토시 나가모토라는 익명의 저자가 쓴 한편의 논문에서 시작 됫으며 이논문은 탈중앙화된 화폐시스템을 제안</p>
+
+<p>이 논문의 주요 제안 내용은 이와 같다</p>
+
+<ul>
+  <li>중앙통제시스템이 없는 탈중앙화된 p2p 네트워크다.</li>
+  <li>이전에 해결하지 못한 <em>이중 지급 문제</em>를 해결했다.</li>
+  <li>거래원장은 모든 참여자에게 공개된다.</li>
+  <li>참여자들은 거래 원장을 조회할수 있고, 규칙에 맞게 작성됐는지 검증할수 있다.</li>
+  <li>블록체인 데이터를 신뢰할수있는 합의시스템(PoW: proof of work)이 있다.</li>
+</ul>
+
+<p>이중지금문제란 어떤 계좌의 잔액이 100원만 남았을때 A에게 100원을 송금하고 B에게도 100원을 송금하는것</p>
+
+<p>중앙통제시스템에서 관리한다면 A에게 100원을 송금하자마자 해당 계좌의 잔액은 비었으므로 B에게 송금이 불가하지만
+중앙통제시스템이 없는 p2p 분산 네트워크는 관리 주체가 없기 때문에 이 문제 해결이 어려움</p>
+
+<p>하지만 이논문을 바탕으로 여러개발자들이 비트코인 논문 제안 내용을 연구하여 비트코인 네트워크를 구현</p>
+
+<h4 id="암호화폐의-주요-이슈"><em>암호화폐의 주요 이슈</em></h4>
+
+<p>p2p 분산 시스템은 근본적으로 데이터의 일관성, 네트워크의 가용성, 분할내성을 동시에 만족할수 없다.</p>
+
+<p>이러한 문제로 인해 기존에 제안된 암호화폐는 묵살 되었고 실생활에 통용될수 없었고 이를 해결하기 위해서는
+다음과 같은 문제점들이 해결되어야한다.</p>
+
+<ul>
+  <li>내가 받은 암호화폐가 진본인지 위조인지 확인가능한가?</li>
+  <li>내가 받은 암호화폐가 이중 지급 된것이 아닌지 확인가능한가?</li>
+  <li>내가 보유한 암호화폐의 소유권을 다른 사용자가 인정가능한가?</li>
+</ul>
+
+<p>위 문제에 대한 기본적 해결책은 중앙통제 시스템이 검증하고 보관하는것이지만, 중앙화폐시스템은 시스템에 대한 공격을 받으면 산하에 있는 정보가 누출된다는 취약점이 있다.</p>
+
+<p>사토시 나카모토는 기존 암호화폐시스템들을 발전시켜 완전히 탈중앙화된 개념을 사용하면서도 위 문제를 해결했다.</p>
+
+<h4 id="비트코인은-기존-암호화페-아이디어-종합체"><em>비트코인은 기존 암호화페 아이디어 종합체</em></h4>
+
+<ul>
+  <li>Ecash schema: p2p 네트워크에서 자신이 암호화폐의 소유자임을 ‘증명’ 하고, 다른 사람들이 ‘검증’ 하기 위해 전자 서명을 사용</li>
+  <li>State machine replication: 각 노드간 데이터 일관성을 보장하기 위한 시스템이다. State는 블록체인의 상태이며 시간에 따라 변한다 <em>1(S1 -&gt; S2 -&gt; S3 -&gt;..)</em>. 시간에 따른 상태 변화는 모든 노드가 동일하게 관리해야 한다.</li>
+  <li>Consensus mechanics: 개별 거래 원장에서 부터 블록체인의 상태까지 모든 과정에 대해 각노드들이 동의할수있는 합의 규칙이다. 이규칙에 의해 전체 상태가 일관되게 유지된다.</li>
+  <li>HashCash computational puzzle: 합의 규칙에 따라 수학적 퍼즐이 제시되고, 채굴자들은 경쟁적으로 이문제를 푼다. 경쟁에서 이긴 채굴자가 블록을 생성할 권한을 받는다. 이 과정을 통해 신규 암호화화폐가 발행되고, 상태 변화의 일관성이 유지된다.</li>
+  <li>peer-to-peer: 서버- 클라이언트 구조가 아닌 p2p 구조로 탈중앙화를 이뤘다.</li>
+</ul>
+
+<ol>
+  <li>추가설명: A,B가 100원씩 잔액이 있는 상태를 S1이라 가정하면, A가 B에게 50원 송금하면 잔액이 변한다. 이상태를 S2라고 하면 송금행위로 인해 블록체인의 상태는 S1-&gt;S2로 변함</li>
+</ol>
+
+<h4 id="블록체인-기술의-의의">블록체인 기술의 의의</h4>
+
+<p>블록체인의 의의는 안전하지 않은 인터넷망에서 어떠한 중재자 없이 가치 있는 대상을 안전하고 자유롭게 거래 가능하게 하는것</p>
+
+<ul>
+  <li>중재자 없는 자유로운 거래 실현
+    <ul>
+      <li>서로 신뢰할수 없는 네트워크 상 안전하게 가치있는 것들을 거래 하게하는 블록체인</li>
+      <li>단순 화폐교환:비트코인, 화폐 뿐 아니라 계약서, 증명성 교환가능: 이더리움</li>
+    </ul>
+  </li>
+  <li>
+    <p>화폐, 계약서, 증명서 등 디지털 대상의 다양화</p>
+  </li>
+  <li>사용자 증가에 따른 새로운 가치 창출
+    <ul>
+      <li>사용자들은 매우 편하게 서로의 가치를 교환할수 있게 됨</li>
+      <li>이 편리함을 바탕으로 사용자들은 점점 많아지고 가치의 교환이 점점더 활발해 짐으로서 새로운 가치 출몰가능성↑</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="블록체인이-가지고-올-비즈니스-혁신">블록체인이 가지고 올 비즈니스 혁신</h4>
+
+<p>블록체인이 가진 4가지 특성:</p>
+<ul>
+  <li>Decentralization (탈중앙화)</li>
+  <li>Transparency (투명성)</li>
+  <li>Anonymous (익명성)</li>
+  <li>Immutability (불변성)</li>
+</ul>
+
+<p>이 4가지의 특징은 점차 사회를 hyper-connect society로 이끌것이다. 거래에서 발생하는 비용절감과 간소화, 스마트컨트랙으로 계약 내용 이행이 자동화 됨으로써 현재 활발하게 개발되고있는 인공지능 기반 자율주행등 기술에도 블록체인의 기술적 가치가 높다.</p>
+
+<h4 id="비트코인-p2p-network">비트코인 p2p network</h4>
+
+<ul>
+  <li>각 노드가 동등함</li>
+  <li>거래 원장관리, 거래승인, 거래내역 검증
+    <ul>
+      <li>거래승인(mining), 거래원장관리(blockchain)</li>
+    </ul>
+  </li>
+  <li>합의 규칙에 따라 각자 업무 수행</li>
+  <li>전체 노드 50%이상이 정상 데이터가지면 일관성 유지가능</li>
+</ul>
+
+<h4 id="비트코인-네트워크-구성원">비트코인 네트워크 구성원</h4>
+
+<p>기본적으로 송금(거래내역생성, 트랜잭션 생성), 송금내용확인(검증) 은 모든 노드가 수행</p>
+
+<ul>
+  <li>Full blockchain node
+    <ul>
+      <li>채굴자 노드가 <em>블록</em>을 생성한것을 기존 블록체인으로 연결해서 블록체인을 관리</li>
+      <li>풀 노드가 관리하는 블록체인에는 모든 거래내역(Transaction,TX)애 저장됨</li>
+      <li>블록체인은 거래 내여들의 집합체이므로 공공거래원장이라고 불림</li>
+      <li>이 공공 거래장부(블록체인)은 풀노드가 가지고 있고 분산저장</li>
+      <li>따라서 일부가 잘못되더라도 자체 복원 능력을 가짐</li>
+    </ul>
+  </li>
+  <li>Lightweight node
+    <ul>
+      <li>스마트기기 후에 설명</li>
+    </ul>
+  </li>
+  <li>Miner node
+    <ul>
+      <li>송금내역을 모아서 승인하는 절차 수행</li>
+      <li>승인이 완료된 트랜잭션들을 모아서 <em>블록</em>을 생성하고 네트워크 전파</li>
+    </ul>
+  </li>
+  <li>3rd party API client
+    <ul>
+      <li>안전성 문제때문에 비트코인 네트워크의 기본 구성원이라 할수없지만 후에 할 실습으로 왜 할수없다 하는지 알아볼 예정</li>
+    </ul>
+  </li>
+</ul>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!--
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Pathfinder practice blog</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            var this_page_url = 'https://pathfinder357.github.io/blockchain-1';
+                            var this_page_identifier = '/blockchain-1';
+                            var this_page_title = '블록체인 (1)';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://xxxxxxxx.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/hash-table">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/author-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/hash-table">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Data-structure</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">자료구조 (7) 해시 테이블</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Hash Table
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://pathfinder357.github.io/">
+            
+            <span>Pathfinder practice blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">블록체인 (1)</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8+%281%29&amp;url=https://pathfinder357.github.ioblockchain-1"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://pathfinder357.github.ioblockchain-1"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://pathfinder357.github.io/">Pathfinder practice blog</a> &copy; 2021</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Pathfinder practice blog</h1>
+            <p class="subscribe-overlay-description">
+                lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
